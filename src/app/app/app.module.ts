@@ -13,6 +13,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { TabViewModule } from 'primeng/tabview';
+import { CheckboxModule } from 'primeng/checkbox';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 
 @NgModule({
@@ -32,8 +35,10 @@ import { TabViewModule } from 'primeng/tabview';
     InputTextModule,
     ButtonModule,
     DropdownModule,
-    TabViewModule
-
+    TabViewModule,
+    CheckboxModule,
+    InputSwitchModule,
+    RadioButtonModule,
   ],
   providers: [
 

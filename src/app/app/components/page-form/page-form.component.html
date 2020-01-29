@@ -1,5 +1,4 @@
-<h1>page-form</h1>
-
+<h1>Form</h1>
 
 <form>
     <p-tabView>
@@ -9,6 +8,23 @@
 
             <h3 class="first">City</h3>
             <p-dropdown [options]="cities"></p-dropdown>
+
+            <h3 class="first">Hobby</h3>
+            <p-checkbox class="p-col" name="hobby" value="sport" label="sport"></p-checkbox>
+            <p-checkbox class="p-col" name="hobby" value="games" label="games"></p-checkbox>
+            <p-checkbox class="p-col" name="hobby" value="cooking" label="cooking"></p-checkbox>
+
+            <h3 class="first">Enabled</h3>
+            <p-inputSwitch></p-inputSwitch>
+
+            <h3 class="first">Sex</h3>
+            <p-radioButton class="p-col-12" name="sex" value="female" label="Female"></p-radioButton>
+            <p-radioButton class="p-col-12" name="sex" value="male" label="Male"></p-radioButton>
+
+            <div class="p-col-12 form-buttons">
+                <button pButton icon="pi pi-check" type="button" label="Save"></button>
+                <button pButton icon="pi pi-times" type="button" label="Cancel" class="ui-button-warning"></button>
+            </div>
         </p-tabPanel>
         <p-tabPanel header="Float">
             <span class="ui-float-label">
