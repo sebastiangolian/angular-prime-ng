@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
+import { PageFormComponent } from './components/page-form/page-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageHomeComponent
+    PageHomeComponent,
+    PageFormComponent
   ],
   imports: [
     BrowserModule,

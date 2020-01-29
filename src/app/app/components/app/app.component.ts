@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.items = [
             {label: 'Home', routerLink: 'home'},
-            {label: 'Test', routerLink: 'page-form'}
+            {label: 'Form', routerLink: 'page-form'}
         ];
     }
 }
