@@ -1,1 +1,34 @@
-<p>page-form works!</p>
+<h1>page-form</h1>
+
+
+<form>
+    <p-tabView>
+        <p-tabPanel header="Basic" class="tab-panel">
+            <h3 class="first">Username</h3>
+            <input id="input" type="text" size="30" pInputText>
+
+            <h3 class="first">City</h3>
+            <p-dropdown [options]="cities"></p-dropdown>
+        </p-tabPanel>
+        <p-tabPanel header="Float">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText>
+                <label for="float-input">Username</label>
+            </span>
+        </p-tabPanel>
+        <p-tabPanel header="Icon">
+            <h3>Disabled</h3>
+            <input id="disabled-input" type="text" size="30" pInputText [disabled]=true />
+
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" pInputText placeholder="Username">
+            </div>
+
+            <i class="pi pi-check"></i>
+            <i class="pi pi-times"></i>
+
+            <button id="disabled-btn" type="button" pButton label="Toggle"></button>
+        </p-tabPanel>
+    </p-tabView>
+</form>

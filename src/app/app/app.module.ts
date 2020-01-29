@@ -4,11 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { PageHomeComponent } from './components/page-home/page-home.component';
+import { PageFormComponent } from './components/page-form/page-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
-import { PageFormComponent } from './components/page-form/page-form.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
+import { TabViewModule } from 'primeng/tabview';
 
 
 @NgModule({
@@ -24,7 +28,12 @@ import { PageFormComponent } from './components/page-form/page-form.component';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    MenubarModule
+    MenubarModule,
+    InputTextModule,
+    ButtonModule,
+    DropdownModule,
+    TabViewModule
+
   ],
   providers: [
 
