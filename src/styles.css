@@ -2,3 +2,5 @@
 .tab-panel{padding:20px;}
 .form-buttons{margin-top:10px;}
 .form-buttons button{margin-right:5px;}
+body .ui-dropdown .ui-dropdown-trigger{background-color:transparent;}
+.ui-dropdown{padding-right:10px;}
