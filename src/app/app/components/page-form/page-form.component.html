@@ -26,25 +26,76 @@
                 <button pButton icon="pi pi-times" type="button" label="Cancel" class="ui-button-warning"></button>
             </div>
         </p-tabPanel>
-        <p-tabPanel header="Float">
+        <p-tabPanel header="Float" class="tab-panel">
             <span class="ui-float-label">
-                <input id="float-input" type="text" size="30" pInputText>
-                <label for="float-input">Username</label>
+                <input type="text" size="30" pInputText>
+                <label>Firstname</label>
             </span>
+            <span class="ui-float-label">
+                <input type="text" size="30" pInputText>
+                <label>Lastname</label>
+            </span>
+            <span class="ui-float-label">
+                <input type="text" size="30" pInputText>
+                <label>Age</label>
+            </span>
+
+            <div class="p-grid">
+                <div class="p-col">
+                    <span class="ui-float-label">
+                        <input type="text" size="30" pInputText>
+                        <label>Street</label>
+                    </span>
+                </div>
+                <div class="p-col">
+                    <span class="ui-float-label">
+                        <input type="text" size="30" pInputText>
+                        <label>Zipcode</label>
+                    </span>
+                </div>
+                <div class="p-col">
+                    <span class="ui-float-label">
+                        <input type="text" size="30" pInputText>
+                        <label>City</label>
+                    </span>
+                </div>
+            </div>
+            <div class="p-col-12 form-buttons">
+                <button pButton icon="pi pi-check" type="button" label="Save"></button>
+                <button pButton icon="pi pi-times" type="button" label="Cancel" class="ui-button-warning"></button>
+            </div>
         </p-tabPanel>
         <p-tabPanel header="Icon">
-            <h3>Disabled</h3>
-            <input id="disabled-input" type="text" size="30" pInputText [disabled]=true />
 
+            <h3 class="first">Username</h3>
             <div class="ui-inputgroup">
                 <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
                 <input type="text" pInputText placeholder="Username">
             </div>
 
-            <i class="pi pi-check"></i>
-            <i class="pi pi-times"></i>
+            <h3 class="first">Card number</h3>
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="pi pi-id-card"></i></span>
+                <input type="text" pInputText placeholder="0000 0000 0000 0000 0000 0000 0000">
+            </div>
 
-            <button id="disabled-btn" type="button" pButton label="Toggle"></button>
+            <h3 class="first">Price</h3>
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon">$</span>
+                <input pinputtext="" placeholder="100" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+                <span class="ui-inputgroup-addon">.00</span>
+            </div>
+
+            <h3 class="first">Website</h3>
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon">www</span>
+                <input pinputtext="" placeholder="Website" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+            </div>
+
+            <div class="p-col-12 form-buttons">
+                <button pButton icon="pi pi-check" type="button" label="Save"></button>
+                <button pButton icon="pi pi-times" type="button" label="Cancel" class="ui-button-warning"></button>
+            </div>
         </p-tabPanel>
     </p-tabView>
 </form>
