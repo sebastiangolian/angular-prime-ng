@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageFormComponent } from './components/page-form/page-form.component';
+import { PageTableComponent } from './components/page-table/page-table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -16,13 +17,16 @@ import { TabViewModule } from 'primeng/tabview';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { TableModule } from 'primeng/table';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageHomeComponent,
-    PageFormComponent
+    PageFormComponent,
+    PageTableComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     CheckboxModule,
     InputSwitchModule,
     RadioButtonModule,
+    TableModule
   ],
   providers: [
 
