@@ -1,8 +1,9 @@
 <h1>Form</h1>
 
-<form>
-    <p-tabView>
-        <p-tabPanel header="Basic" class="tab-panel">
+
+<p-tabView>
+    <p-tabPanel header="Basic" class="tab-panel">
+        <form>
             <h3 class="first">Username</h3>
             <input id="input" type="text" size="30" pInputText>
 
@@ -25,8 +26,10 @@
                 <button pButton icon="pi pi-check" type="button" label="Save"></button>
                 <button pButton icon="pi pi-times" type="button" label="Cancel" class="ui-button-warning"></button>
             </div>
-        </p-tabPanel>
-        <p-tabPanel header="Float" class="tab-panel">
+        </form>
+    </p-tabPanel>
+    <p-tabPanel header="Float" class="tab-panel">
+        <form>
             <span class="ui-float-label">
                 <input type="text" size="30" pInputText>
                 <label>Firstname</label>
@@ -64,38 +67,120 @@
                 <button pButton icon="pi pi-check" type="button" label="Save"></button>
                 <button pButton icon="pi pi-times" type="button" label="Cancel" class="ui-button-warning"></button>
             </div>
-        </p-tabPanel>
-        <p-tabPanel header="Icon">
+        </form>
+    </p-tabPanel>
+    <p-tabPanel header="Icon">
 
-            <h3 class="first">Username</h3>
-            <div class="ui-inputgroup">
-                <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-                <input type="text" pInputText placeholder="Username">
-            </div>
+        <h3 class="first">Username</h3>
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input type="text" pInputText placeholder="Username">
+        </div>
 
-            <h3 class="first">Card number</h3>
-            <div class="ui-inputgroup">
-                <span class="ui-inputgroup-addon"><i class="pi pi-id-card"></i></span>
-                <input type="text" pInputText placeholder="0000 0000 0000 0000 0000 0000 0000">
-            </div>
+        <h3 class="first">Card number</h3>
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="pi pi-id-card"></i></span>
+            <input type="text" pInputText placeholder="0000 0000 0000 0000 0000 0000 0000">
+        </div>
 
-            <h3 class="first">Price</h3>
-            <div class="ui-inputgroup">
-                <span class="ui-inputgroup-addon">$</span>
-                <input pinputtext="" placeholder="100" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
-                <span class="ui-inputgroup-addon">.00</span>
-            </div>
+        <h3 class="first">Price</h3>
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon">$</span>
+            <input pinputtext="" placeholder="100" type="text"
+                class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+            <span class="ui-inputgroup-addon">.00</span>
+        </div>
 
-            <h3 class="first">Website</h3>
-            <div class="ui-inputgroup">
-                <span class="ui-inputgroup-addon">www</span>
-                <input pinputtext="" placeholder="Website" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
-            </div>
+        <h3 class="first">Website</h3>
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon">www</span>
+            <input pinputtext="" placeholder="Website" type="text"
+                class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+        </div>
 
-            <div class="p-col-12 form-buttons">
-                <button pButton icon="pi pi-check" type="button" label="Save"></button>
-                <button pButton icon="pi pi-times" type="button" label="Cancel" class="ui-button-warning"></button>
+        <div class="p-col-12 form-buttons">
+            <button pButton icon="pi pi-check" type="button" label="Save"></button>
+            <button pButton icon="pi pi-times" type="button" label="Cancel" class="ui-button-warning"></button>
+        </div>
+    </p-tabPanel>
+    <p-tabPanel header="Validation">
+        <form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
+            <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2">
+                        First Name *:
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <input pInputText type="text" formControlName="firstname" placeholder="Required" />
+                    </div>
+                    <div class="ui-grid-col-4">
+                        <p-message severity="error" text="Firstname is required"
+                            *ngIf="!userform.controls['firstname'].valid&&userform.controls['firstname'].dirty">
+                        </p-message>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2">
+                        Last Name *:
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <input pInputText type="text" formControlName="lastname" placeholder="Required" />
+                    </div>
+                    <div class="ui-grid-col-4">
+                        <p-message severity="error" text="Lastname is required"
+                            *ngIf="!userform.controls['lastname'].valid&&userform.controls['lastname'].dirty">
+                        </p-message>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2">
+                        Email *:
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <input pInputText type="email" formControlName="email" placeholder="Required - Min(10)" />
+                    </div>
+                    <div class="ui-grid-col-4">
+                        <p-message severity="error"
+                            [text]="userform.controls['email'].errors['required'] ? 'Emial is required' : userform.controls['email'].errors['minlength'] ? 'Must be longer than 6 characters' : ''"
+                            *ngIf="!userform.controls['email'].valid&&userform.controls['email'].dirty">
+                        </p-message>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2">
+                        Description:
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <textarea pInputTextarea type="text" formControlName="description"></textarea>
+                    </div>
+                    <div class="ui-grid-col-4"></div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2">
+                        City *:
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <p-dropdown [options]="cities" formControlName="city"></p-dropdown>
+                    </div>
+                    <div class="ui-grid-col-4">
+                        <p-message severity="error" text="City is required"
+                            *ngIf="!userform.controls['city'].valid&&userform.controls['city'].dirty">
+                        </p-message>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2"></div>
+                    <div class="ui-grid-col-6">
+                        <button pButton type="submit" label="Submit" [disabled]="!userform.valid"></button>
+                    </div>
+                    <div class="ui-grid-col-4"></div>
+                </div>
+                <div style="text-align:center;margin-top:20px" *ngIf="submitted">
+                    Form Submitted
+                    <br>
+                    {{diagnostic}}
+                </div>
             </div>
-        </p-tabPanel>
-    </p-tabView>
-</form>
+        </form>
+    </p-tabPanel>
+</p-tabView>

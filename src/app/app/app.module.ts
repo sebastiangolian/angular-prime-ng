@@ -7,7 +7,7 @@ import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageFormComponent } from './components/page-form/page-form.component';
 import { PageTableComponent } from './components/page-table/page-table.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
@@ -19,6 +19,8 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { TableModule } from 'primeng/table';
 import { PaginatorModule } from 'primeng/paginator';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
 
 
 
@@ -36,6 +38,7 @@ import { PaginatorModule } from 'primeng/paginator';
     AppRoutingModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     MenubarModule,
     InputTextModule,
     ButtonModule,
@@ -45,7 +48,9 @@ import { PaginatorModule } from 'primeng/paginator';
     InputSwitchModule,
     RadioButtonModule,
     TableModule,
-    PaginatorModule
+    PaginatorModule,
+    MessagesModule,
+    MessageModule
   ],
   providers: [
 

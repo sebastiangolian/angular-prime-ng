@@ -3,5 +3,5 @@
 .form-buttons{margin-top:10px;}
 .form-buttons button{margin-right:5px;}
 body .ui-dropdown .ui-dropdown-trigger{background-color:transparent;}
-.ui-dropdown{padding-right:10px;}
+.ui-dropdown{padding-right:5px;padding-left:5px;}
 .ui-float-label{margin-top:20px;}
