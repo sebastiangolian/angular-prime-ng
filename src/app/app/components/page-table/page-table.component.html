@@ -1,6 +1,8 @@
 <h1>Table</h1>
 
-<p-table [value]="posts | async">
+<p-paginator [rows]="10" totalRecords="100" (onPageChange)="paginate($event)"></p-paginator>
+
+<p-table [value]="renderedPosts">
     <ng-template pTemplate="header">
         <tr>
             <th *ngFor="let col of cols">

@@ -18,6 +18,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { TableModule } from 'primeng/table';
+import { PaginatorModule } from 'primeng/paginator';
 
 
 
@@ -43,7 +44,8 @@ import { TableModule } from 'primeng/table';
     CheckboxModule,
     InputSwitchModule,
     RadioButtonModule,
-    TableModule
+    TableModule,
+    PaginatorModule
   ],
   providers: [
 
